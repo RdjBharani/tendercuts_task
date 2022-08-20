@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "30fac53a-b9a2-423f-a558-f3c25e40ff39",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18253840"
+	},
+	"item": [
+		{
+			"name": "create order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 018535f9fd7f635bae9b2a25a3c5f2e27776bfed",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_list\": [{\"store_item_mapping_id\": 1,\"quantity\": 1},{\"store_item_mapping_id\": 2,\"quantity\": 4}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create-order/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create-order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 018535f9fd7f635bae9b2a25a3c5f2e27776bfed",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/create-order/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create-order",
+						""
+					],
+					"query": [
+						{
+							"key": "order_id",
+							"value": "65",
+							"disabled": true
+						},
+						{
+							"key": "order_ids",
+							"value": "[65,66]",
+							"disabled": true
+						},
+						{
+							"key": "store_id",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 018535f9fd7f635bae9b2a25a3c5f2e27776bfed",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_id\":65,\r\n    \"status_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create-order/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create-order",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
